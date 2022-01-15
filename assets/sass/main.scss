@@ -1,0 +1,233 @@
+/* ======================== Google Fonts - Montserrat =========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* ======================== Variables Code =========================*/
+// Text color
+$text-color: #787878;
+$text_color_dark: #191919;
+$text_color_light: white;
+
+
+// Text hover
+$text_hover_1: #44cdc8;
+
+// BG color
+$bg_color_1: #E9E9E9;
+$bg_color_2: #F7FBFA;
+
+/* ======================== Reset Code =========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======================== General Code =========================*/
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+  // border: 1px solid red;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* ================================================================ 
+--------------------------- Header Area Code Start ----------------
+==================================================================*/
+#header-area {
+  padding-top: 35px;
+  background-image: linear-gradient(145deg, transparent, rgba(255,255,255, 0.5)),
+                    url('../img/header_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+
+  // Navigation bar
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+      .logo {
+        min-width: 35px;
+        max-width: 100px;
+        height: auto;
+      }
+    }
+
+    .navbar-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+
+      .nav-item {
+        .nav-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0.75em;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: $text_color_dark;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: $text_hover_1;
+          }
+        }
+      }
+    }
+
+  }
+
+  // Hero area
+  #hero-area {
+    padding: 180px 0 200px;
+
+    .hero-area-contents {
+      width: 40%;
+      margin-left: auto;
+
+      .main-title {
+        font-size: 2.2em;
+        color: $text_color_dark;
+        margin-bottom: 45px;
+        font-weight: 500;
+      }
+
+      .desc {
+        text-align: justify;
+        font-size: 0.9em;
+        margin-bottom: 35px;
+        line-height: 1.7em;
+        color: $text-color;
+        font-weight: 500;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: $text_hover_1;
+        padding: 15px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: 500;
+        border: 1px solid $text_hover_1;
+        color: $text_color_light;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border: 1px solid $text_hover_1;
+          background-color: transparent;
+          color: $text_hover_1;
+          box-shadow: 7px 7px 15px #ccc;
+        }
+      }
+    }
+  }
+}
+
+/* ================================================================ 
+--------------------------- Header Area Code End ----------------
+==================================================================*/
+
+/* ================================================================ 
+--------------------------- Main Area Code Start ----------------
+==================================================================*/
+#main-area {
+
+  /* ======================== About Area Start =========================*/
+  #about-area {
+    padding: 100px 0;
+    text-align: center;
+
+    .about-area-contents {
+      width: 70%;
+      margin: 0 auto;
+      .title {
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        font-size: 1.8em;
+        color: $text_color_dark;
+      }
+
+      .desc {
+        font-size: 0.9em;
+        margin-bottom: 40px;
+        line-height: 1.7em;
+        color: $text-color;
+        font-weight: 500;
+      }
+
+      .signature {
+        max-width: 70%;
+        height: auto;
+      }
+    }
+  }
+  /* ======================== About Area End =========================*/
+
+  /* ======================== Skills Section Start =========================*/
+  #skills-section {
+    padding: 100px 0;
+    background-color: $bg_color_2;
+    background-image: url('../img/skills-bg.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+
+    .skills-contents {
+      width: 50%;
+      .title {
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        font-size: 1.8em;
+        color: $text_color_dark;
+      }
+
+      .skills {
+        .skill {
+          margin-bottom: 25px;
+          label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 700;
+            color: $text_color_dark;
+          }
+
+          progress {
+            width: 100%;
+            height: 0.5em;
+          }
+
+          progress::-webkit-progress-value {
+            background-color: $text_hover_1;
+            border-radius: 10px;
+          }
+
+          progress::-webkit-progress-bar {
+            background-color: $text-color;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  /* ======================== Skills Section End =========================*/
+}
+
+/* ================================================================ 
+--------------------------- Main Area Code End ----------------
+==================================================================*/
